@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Stats - TinyLink</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TinyLink</h1>
+            <a href="/" class="back-link">&larr; Back to Dashboard</a>
+        </header>
+
+        <main>
+            <div id="loadingState" class="loading">Loading link stats...</div>
+            <div id="errorState" class="error-state hidden">
+                <p>Link not found or failed to load stats.</p>
+                <a href="/" class="btn btn-primary">Go to Dashboard</a>
+            </div>
+
+            <section id="statsSection" class="stats-section hidden">
+                <h2>Link Statistics</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Short Code</h3>
+                        <p class="stat-value" id="statCode">-</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Total Clicks</h3>
+                        <p class="stat-value highlight" id="statClicks">0</p>
+                    </div>
+
+                    <div class="stat-card full-width">
+                        <h3>Target URL</h3>
+                        <p class="stat-url" id="statTargetUrl">-</p>
+                        <a href="" id="statTargetUrlLink" target="_blank" class="btn btn-secondary">Visit URL</a>
+                    </div>
+
+                    <div class="stat-card full-width">
+                        <h3>Short URL</h3>
+                        <div class="short-url-display">
+                            <a href="" id="statShortUrl" target="_blank">-</a>
+                            <button class="btn-copy" id="copyBtn">Copy</button>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Created</h3>
+                        <p class="stat-value" id="statCreated">-</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Last Clicked</h3>
+                        <p class="stat-value" id="statLastClicked">Never</p>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn btn-danger" id="deleteBtn">Delete Link</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>TinyLink &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script src="/js/stats.js"></script>
+</body>
+</html>
